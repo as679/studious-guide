@@ -17,7 +17,7 @@ spec:
         app: oranges
     spec:
       containers:
-      - image: avinetworks/server-os
+      - image: gcr.io/kuar-demo/kuard-amd64:1
         name: oranges
         ports:
         - containerPort: 8080
@@ -42,7 +42,7 @@ spec:
         app: apples
     spec:
       containers:
-      - image: avinetworks/server-os
+      - image: gcr.io/kuar-demo/kuard-amd64:1
         name: apples
         ports:
         - containerPort: 8080
