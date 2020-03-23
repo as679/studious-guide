@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: oranges-ingress
+  namespace: fruits
+spec:
+  backend:
+    serviceName: oranges
+    servicePort: 80
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: apples-ingress
+  namespace: fruits
+spec:
+  rules:
+  - host: apples.fruits.app.pod1.lab
+    http:
+      paths:
+        - backend:
+            serviceName: apples
+            servicePort: 80
+
