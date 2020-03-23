@@ -1,0 +1,30 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: colourful-apples
+  namespace: fruits
+spec:
+  rules:
+  - host: red-apples.fruits.app.pod1.lab
+    http:
+      paths:
+      - path: /blush
+        backend:
+          serviceName: apples
+          servicePort: 80
+      - path: /red
+        backend:
+          serviceName: apples
+          servicePort: 80
+  - host: green-apples.fruits.app.pod1.lab
+    http:
+      paths:
+      - path: /golden
+        backend:
+          serviceName: apples
+          servicePort: 80
+      - path: /green
+        backend:
+          serviceName: apples
+          servicePort: 80
