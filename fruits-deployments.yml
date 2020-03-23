@@ -1,0 +1,50 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: oranges
+  name: oranges-deployment
+  namespace: fruits
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: oranges
+  template:
+    metadata:
+      labels:
+        app: oranges
+    spec:
+      containers:
+      - image: avinetworks/server-os
+        name: oranges
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: apples
+  name: apples-deployment
+  namespace: fruits
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apples
+  template:
+    metadata:
+      labels:
+        app: apples
+    spec:
+      containers:
+      - image: avinetworks/server-os
+        name: apples
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
