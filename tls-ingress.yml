@@ -2,15 +2,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: banana
+  name: bananas-ingress
   namespace: fruits
 spec:
   tls:
   - hosts:
-    - banana.fruits.app.pod1.lab
-    secretName: banana-ecdsa-cert
+    - bananas.fruits.app.pod1.lab
+    secretName: bananas-ecdsa-cert
   rules:
-  - host: banana.fruits.app.pod1.lab
+  - host: bananas.fruits.app.pod1.lab
     http:
       paths:
       - path: /
