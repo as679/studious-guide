@@ -1,0 +1,18 @@
+{
+  "kv": [
+    {
+      "key": "red"
+    },
+    {
+      "key": "blush"
+    },
+    {
+      "key": "green"
+    },
+    {
+      "key": "golden"
+    }
+  ],
+  "type": "SG_TYPE_STRING",
+  "name": "rewrite-list"
+}

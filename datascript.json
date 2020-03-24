@@ -1,0 +1,12 @@
+{
+  "datascript": [
+    {
+      "evt": "VS_DATASCRIPT_EVT_HTTP_REQ",
+      "script": "path = avi.http.get_path_tokens()\nif path then\n  val,match = avi.stringgroup.contains(\"rewrite-list\", path[1])\n  if match then\n    table.remove(path, 1)\n    new_path = \"/\" .. table.concat(path, \"/\")\n    avi.http.set_path(new_path)\n  end\nend"
+    }
+  ],
+  "string_group_refs": [
+    "/api/stringgroup?name=rewrite-list"
+  ],
+  "name": "rewrite-path-handler-1"
+}
