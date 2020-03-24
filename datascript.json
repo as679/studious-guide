@@ -8,5 +8,5 @@
   "string_group_refs": [
     "/api/stringgroup?name=rewrite-list"
   ],
-  "name": "rewrite-path-handler-1"
+  "name": "rewrite-path-handler"
 }
