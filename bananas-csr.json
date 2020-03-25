@@ -1,0 +1,17 @@
+{
+  "CN": "bananas.fruits.app.pod1.lab",
+  "hosts": ["*"],
+  "key": {
+    "algo": "ecdsa",
+    "size": 256
+  },
+  "names": [
+    {
+      "C": "GB",
+      "L": "Barnsley",
+      "O": "Avi Networks",
+      "OU": "ProServ",
+      "ST": "Yorkshire"
+    }
+  ]
+}
